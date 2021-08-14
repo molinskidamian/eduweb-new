@@ -58,11 +58,15 @@ body {
     height: 2rem;
   }
   .mobile-menu li a > p {
-    display: none;
+    opacity: 0;
+    margin-bottom: -1rem;
   }
   .mobile-menu li a:hover > p {
     display: block;
     padding-top: 0.5rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
   }
   .mobile-menu li a > span {
     display: block;
