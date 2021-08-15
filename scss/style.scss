@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700&display=swap");
 
+$inputBg: rgba(55, 57, 61, 1);
+$inputPlaceholderColor: rgba(172, 172, 172, 1);
+$red: rgba(233, 76, 93, 1);
+
+input,
+input[type="search"] {
+    background-color: $inputBg;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-weight: bold;
+    color: $inputPlaceholderColor;
+}
+
 body {
     font-family: "Catamaran", sans-serif;
     font-size: 16px;
@@ -128,6 +142,53 @@ body {
                 font-size: 1.2rem;
                 font-weight: bold;
                 text-decoration: none;
+            }
+
+            & > a > p {
+                background-color: $red;
+                height: 2rem;
+            }
+        }
+
+        li:last-child {
+            // outline: 1px dashed red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & > form {
+                display: flex;
+                align-items: center;
+                // outline: 1px dashed orange;
+                width: 100%;
+                input {
+                    height: 3.5rem;
+                    border-radius: 2rem 0 0 2rem;
+                    // width: 70%;
+                    // outline: 1px dashed orange;
+                    width: 90%;
+                }
+                input::placeholder {
+                    color: $inputPlaceholderColor;
+                }
+                & > button {
+                    // height: 100%;
+                    border: none;
+                    outline: none;
+                    background-color: $inputBg;
+                    color: $inputPlaceholderColor;
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    border-radius: 0 2rem 2rem 0;
+                }
+            }
+
+            & > button {
+                background-color: #fff;
+                border: none;
+                outline: none;
+                height: 3.5rem;
+                width: 3.5rem;
+                border-radius: 2rem;
             }
         }
     }
