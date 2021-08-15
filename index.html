@@ -19,85 +19,56 @@
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
-        <header id="header" class="container-fluid">
-            <img src="/img/eduweb.svg" id="logo" alt="logo" />
-            <ul class="main-nav">
-                <li><a href="#">Kursy</a></li>
-                <li><a href="#">Ścieżki</a></li>
-                <li><a href="#">Ceny</a></li>
-                <li><a href="#">Nowości</a></li>
-                <li><a href="#">Pomoc</a></li>
-            </ul>
+        <header class="main-header">
+            <nav class="main-nav-wrapper">
+                <img class="main-logo" alt="Logo" />
+                <ul class="main-nav">
+                    <li class="main-nav--item"><a class="main-nav--link" href="#">Kursy <span class="fas fa-chevron-down"></span></a></li>
+                    <li class="main-nav--item"><a class="main-nav--link" href="#">Ścieżki <span class="fas fa-chevron-down"></span></a></li></li>
+                    <li class="main-nav--item"><a class="main-nav--link" href="#">Cennik</a></li>
+                    <li class="main-nav--item"><a class="main-nav--link" href="#">Nowości</a></li>
+                    <li class="main-nav--item"><a class="main-nav--link" href="#">Pomoc <span class="fas fa-chevron-down"></span></a></li>
+                </ul>
+            </nav>
+
+            <nav class="mobile-main-nav-wrapper">
+                <ul class="mobile-main-nav">
+                    <li class="mobile-main-nav--item">
+                        <a class="mobile-main-nav--link" href="#"
+                            ><img
+                                src="https://eduweb.pl/assets/icons/nauka-icon.svg"
+                                alt="Główna"
+                        /></a>
+                    </li>
+                    <li class="mobile-main-nav--item">
+                        <a class="mobile-main-nav--link" href="#"
+                            ><img
+                                src="https://eduweb.pl/assets/icons/people-icon.svg"
+                                alt="Zespoły"
+                        /></a>
+                    </li>
+                    <li class="mobile-main-nav--item">
+                        <a class="mobile-main-nav--link" href="#"
+                            ><img
+                                src="https://eduweb.pl/assets/icons/playlists-icon.svg"
+                                alt="Playlist"
+                        /></a>
+                    </li>
+                    <li class="mobile-main-nav--item">
+                        <a class="mobile-main-nav--link" href="#"
+                            ><img
+                                src="https://eduweb.pl/assets/icons/thunder-icon.svg"
+                                alt="Zadania"
+                        /></a>
+                    </li>
+                    <li class="mobile-main-nav--item">
+                        <a class="mobile-main-nav--link" href="#"
+                            ><span>Menu</span></a
+                        >
+                    </li>
+                </ul>
+            </nav>
         </header>
-
-        <div class="mobile-menu-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col">asd</div>
-                </div>
-            </div>
-        </div>
-
-        <ul class="mobile-menu">
-            <li class="menu-item">
-                <a class="item-link" href="#"
-                    ><img
-                        class="item-image"
-                        src="img/mobile-icons/nauka-icon.svg"
-                        alt=""
-                    />
-                    <p class="item-text">Główna</p></a
-                >
-            </li>
-            <li>
-                <a href="#"
-                    ><img src="img/mobile-icons/people-icon.svg" alt="" />
-                    <p>Zespoły</p></a
-                >
-            </li>
-            <li>
-                <a href="#"
-                    ><img src="img/mobile-icons/playlists-icon.svg" alt="" />
-                    <p>Playlisty</p></a
-                >
-            </li>
-            <li class="menu-item">
-                <a href="#"
-                    ><img src="img/mobile-icons/thunder-icon.svg" alt="" />
-                    <p>Zadania</p></a
-                >
-            </li>
-            <li>
-                <a id="mobile-menu-button" href="#"><span>MENU</span></a>
-            </li>
-        </ul>
-        <ul class="mobile-menu-extends">
-            <li>
-                <a href="#">Kursy</a>
-            </li>
-            <li>
-                <a href="#">Śieżki</a>
-            </li>
-            <li>
-                <a href="#">Cennik</a>
-            </li>
-            <li>
-                <a href="#">Nowości</a>
-            </li>
-            <li>
-                <a href="#">Pomoc</a>
-            </li>
-            <li>
-                <a href="#"><p>Miło Cię widzieć, Damian</p></a>
-            </li>
-            <li>
-                <form action="">
-                    <input type="search" placeholder="Wyszukaj" />
-                    <button class="fas fa-search"></button>
-                </form>
-                <button>X</button>
-            </li>
-        </ul>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

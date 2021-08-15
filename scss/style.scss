@@ -3,6 +3,8 @@
 $inputBg: rgba(55, 57, 61, 1);
 $inputPlaceholderColor: rgba(172, 172, 172, 1);
 $red: rgba(233, 76, 93, 1);
+$navBorder: rgba(44, 45, 50, 1);
+$navBg: #212328;
 
 input,
 input[type="search"] {
@@ -20,237 +22,110 @@ body {
 }
 
 @media (max-width: 750px) {
-    #header {
-        background-color: red;
-        display: none;
+    body {
+        position: relative;
+        background-color: #777;
     }
 
-    .mobile-menu,
-    .mobile-menu-open {
-        background-color: #212328;
-        // background-color: red;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    .main-header {
         position: fixed;
         bottom: 0;
         width: 100%;
-        height: 5rem;
-        // z-index: 0;
-
-        li {
-            width: 20%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // outline: 1px solid red;
-            position: relative;
-
-            &:last-child {
-                // outline: 1px dotted blue;
-            }
-
-            a {
-                // outline: 1px solid yellow;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                text-transform: uppercase;
-                color: white;
-                text-decoration: none;
-
-                img {
-                    width: 2rem;
-                    height: 2rem;
-                }
-
-                & > p {
-                    // display: none;
-                    opacity: 0;
-                    margin-bottom: -1rem;
-                    // overflow: hidden;
-                }
-
-                &:hover > p {
-                    display: block;
-                    padding-top: 0.5rem;
-                    transition: all 0.3s ease-in-out;
-                    opacity: 1;
-                }
-
-                & > span {
-                    display: block;
-                    width: 4rem;
-                    height: 4rem;
-                    color: #212328;
-                    position: absolute;
-                    top: -0.5rem;
-                    line-height: 4.2rem;
-                    text-align: center;
-                    // text-decoration: underline;
-                    background-color: #fff;
-                    // outline: 1px dashed red;
-                    border-radius: 4rem;
-                    font-weight: bold;
-                }
-
-                & > span::after {
-                    content: "";
-                    border: 1px solid #212328;
-                    display: block;
-                    margin: -1.5rem;
-                    width: 50%;
-                    margin-left: 1rem;
-                }
-            }
-        }
     }
 
-    .mobile-menu-open {
-        position: absolute;
-        top: 0;
-
-        & > li:last-child {
-            display: none;
-        }
-
-        & > li > a > p {
-            display: block;
-            opacity: 1;
-            padding: 0.5rem;
-        }
-    }
-
-    .mobile-menu-extends {
-        margin-top: 4rem;
+    .main-nav {
         display: none;
-        outline: 1px dashed red;
-        flex-direction: column;
-        li {
-            height: 6rem;
-            // outline: 1px dotted black;
-            line-height: 6rem;
-            padding-left: 4rem;
-            background-color: #212328;
-            border-bottom: 1px solid rgba(44, 45, 50, 1);
-
-            a:link,
-            a:visited {
-                color: #fff;
-                font-size: 1.2rem;
-                font-weight: bold;
-                text-decoration: none;
-            }
-
-            & > a > p {
-                background-color: $red;
-                height: 2rem;
-            }
-        }
-
-        li:last-child {
-            // outline: 1px dashed red;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            & > form {
-                display: flex;
-                align-items: center;
-                // outline: 1px dashed orange;
-                width: 100%;
-                input {
-                    height: 3.5rem;
-                    border-radius: 2rem 0 0 2rem;
-                    // width: 70%;
-                    // outline: 1px dashed orange;
-                    width: 90%;
-                }
-                input::placeholder {
-                    color: $inputPlaceholderColor;
-                }
-                & > button {
-                    // height: 100%;
-                    border: none;
-                    outline: none;
-                    background-color: $inputBg;
-                    color: $inputPlaceholderColor;
-                    height: 3.5rem;
-                    width: 3.5rem;
-                    border-radius: 0 2rem 2rem 0;
-                }
-            }
-
-            & > button {
-                background-color: #fff;
-                border: none;
-                outline: none;
-                height: 3.5rem;
-                width: 3.5rem;
-                border-radius: 2rem;
-            }
-        }
     }
 
-    // .mobile-menu-wrapper {
-    //     // background-color: #212328;
-    //     background-color: #ff0000;
-    //     width: 100%;
-    //     height: 100vh;
-    //     color: white;
-    //     z-index: 10000;
-    // }
+    .main-logo {
+        display: none;
+    }
+
+    .mobile-main-nav {
+        background-color: $navBg;
+        display: flex;
+        justify-content: space-around;
+        height: 5rem;
+        align-items: center;
+        position: relative;
+    }
+
+    .mobile-main-nav--item {
+        // outline: 1px dashed green;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-main-nav--link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-main-nav--link > span {
+        // outline: 1px dashed red;
+        position: absolute;
+        top: -1rem;
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        background-color: #fff;
+        color: #000;
+        border-radius: 2rem;
+    }
 }
 
 @media (min-width: 751px) {
-    #header {
-        display: flex;
-        // justify-content: center;
-        align-items: center;
-        height: 75px;
-        background-color: #212328;
-        color: #fff;
-        // line-height: 75px;
-        padding-left: 5rem;
-
-        .main-nav {
-            display: flex;
-            list-style-type: none;
-
-            li {
-                &:first-child {
-                    margin-left: 4rem;
-                }
-                color: #fff;
-                // outline: 1px dashed red;
-                margin: 0 1rem;
-
-                a:link,
-                a:visited {
-                    color: #fff;
-                    text-decoration: none;
-                }
-                a:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        #logo {
-            width: 8rem;
-        }
-
-        img {
-            display: flex;
-            align-items: center;
-        }
+    .main-header {
+        background-color: $navBg;
+        height: 5rem;
+        line-height: 5rem;
     }
-    .mobile-menu {
+
+    .mobile-main-nav-wrapper {
         display: none;
     }
 
-    .progress-mobile {
-        margin: 2rem;
+    .main-nav-wrapper {
+        display: flex;
+        align-items: center;
+        padding-left: 3rem;
+    }
+
+    .main-nav {
+        display: flex;
+    }
+
+    .main-nav--link {
+        color: #fff;
+        padding: 0 1rem;
+        font-weight: bold;
+        text-decoration: none;
+
+        & > span {
+            padding-left: 0.2rem;
+        }
+    }
+    .main-logo {
+        content: url("https://eduweb.pl/assets/eduweb-min.svg");
+        max-height: 3rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    body {
+        background-color: red;
+    }
+    .main-logo {
+        content: url("https://eduweb.pl/assets/eduweb.svg");
+        height: 5rem;
     }
 }
