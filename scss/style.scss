@@ -11,8 +11,10 @@ body {
         display: none;
     }
 
-    .mobile-menu {
+    .mobile-menu,
+    .mobile-menu-open {
         background-color: #212328;
+        // background-color: red;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -20,6 +22,7 @@ body {
         bottom: 0;
         width: 100%;
         height: 5rem;
+        // z-index: 0;
 
         li {
             width: 20%;
@@ -89,6 +92,30 @@ body {
                 }
             }
         }
+    }
+
+    .mobile-menu-open {
+        position: absolute;
+        top: 0;
+
+        & > li:last-child {
+            display: none;
+        }
+
+        & > li > a > p {
+            display: block;
+            opacity: 1;
+            padding: 0.5rem;
+        }
+    }
+
+    .mobile-menu-wrapper {
+        // background-color: #212328;
+        background-color: #ff0000;
+        width: 100%;
+        height: 100vh;
+        color: white;
+        z-index: 10000;
     }
 }
 
