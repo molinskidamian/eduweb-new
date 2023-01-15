@@ -77,12 +77,17 @@ body {
                 top: -1rem;
                 width: 4rem;
                 height: 4rem;
-                line-height: 4rem;
+                line-height: 4.2rem;
                 border-radius: 4rem;
                 text-align: center;
                 font-weight: 800;
                 font-size: 0.9rem;
                 background-color: #fff;
+
+                img {
+                    height: 1.25rem;
+                    padding-top: 1.5rem;
+                }
             }
         }
     }
@@ -95,7 +100,10 @@ Small devices (landscape phones, 576px and up) */
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 750px) {
+    nav.mobile-main-nev {
+        display: none;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
