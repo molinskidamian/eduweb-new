@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500;600;700;800&display=swap");
+@import "./variables";
 
 body {
     font-family: "Catamaran", sans-serif;
@@ -10,7 +11,7 @@ body {
 
 @media (min-width: 320px) {
     .mobile-main-nav {
-        background-color: #212328;
+        background-color: $color-header-bg;
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -101,8 +102,65 @@ Small devices (landscape phones, 576px and up) */
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 750px) {
-    nav.mobile-main-nev {
+    nav.mobile-main-nav {
         display: none;
+    }
+
+    header.c_header {
+        min-height: $nav-height--md;
+        background-color: $color-header-bg;
+        color: $color-font-white;
+        display: flex;
+        align-items: center;
+        padding: 0 2.81rem;
+
+        .c_header--left,
+        .c_header--right {
+            display: flex;
+            align-items: center;
+            // outline: 1px dashed red;
+            width: 50vw;
+        }
+
+        .main-logo {
+            max-height: 1.25rem;
+            max-width: 1.25rem;
+        }
+
+        .main_nav {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav--item {
+            margin-right: $nav-padding--item;
+        }
+
+        .main_nav--link {
+            color: $color-font-white;
+            text-decoration: none;
+            font-size: $font_size--3;
+            margin-right: $nav-padding--item;
+            font-weight: 700;
+            text-transform: capitalize;
+
+            &:first-child {
+                margin-left: $nav-padding--item;
+            }
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .is-hover::after {
+            content: "";
+            position: absolute;
+            bottom: -0.25rem;
+            height: 2px;
+            width: 100%;
+            background: #fff;
+            transition: content 0.5s ease-in-out;
+        }
     }
 }
 
@@ -112,4 +170,20 @@ Small devices (landscape phones, 576px and up) */
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+    header.c_header {
+        padding: 0 5.625rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1500px) {
+    header.c_header {
+        min-height: $nav-height--lg;
+        background-color: $color-header-bg;
+        color: $color-font-white;
+
+        .main_nav--link {
+            font-size: $font_size--4;
+        }
+    }
 }
