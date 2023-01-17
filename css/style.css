@@ -6,6 +6,11 @@
 /*17,6px*/
 /*19,2px*/
 /*20.8px*/
+button {
+  border: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Catamaran", sans-serif;
   font-size: 16px;
@@ -111,6 +116,8 @@ Small devices (landscape phones, 576px and up) */
         -ms-flex-align: center;
             align-items: center;
     padding: 0 2.81rem;
+    /* Left site main_nav */
+    /* Right site main_nav */
   }
   header.c_header .c_header--left,
   header.c_header .c_header--right {
@@ -162,6 +169,40 @@ Small devices (landscape phones, 576px and up) */
     background: #fff;
     -webkit-transition: content 0.5s ease-in-out;
     transition: content 0.5s ease-in-out;
+  }
+  header.c_header .search_main > form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.c_header .search_main > form > input {
+    width: 17.5rem;
+    height: 50px;
+    border: 0;
+    padding: 0;
+    padding-left: 2rem;
+    border-radius: 2rem 0 0 2rem;
+    background-color: #37393d;
+    font-weight: 700;
+  }
+  header.c_header .search_main > form > button {
+    height: 50px;
+    width: 2rem;
+    background-color: #37393d;
+    border-radius: 0 2rem 2rem 0;
+    margin: 0;
+    padding-right: 2rem;
+  }
+  header.c_header .search_main > form svg {
+    margin: 0;
+    padding: 0;
+    height: 1rem;
+    width: 1rem;
+    fill: #727375;
+    background-color: #37393d;
   }
 }
 
